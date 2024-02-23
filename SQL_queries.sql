@@ -1,4 +1,7 @@
---What are the quarterly trends for order count, sales and AOV, for Macbooks sold in North America across all years?
+-- What are the quarterly trends for order count, sales and AOV, for Macbooks sold in North America across all years?
+-- Double join between the orders, customers, and geo_lookup table
+-- Use a CTE to get the average of the metrics
+-- Group by 1 to see breakdown by quarter
 
 WITH quarterly_trends AS (SELECT date_trunc(purchase_ts, quarter) as quarter,
   count (distinct orders.id) as total_orders, 
@@ -19,6 +22,8 @@ SELECT avg(total_orders) avg_orders,
 FROM quarterly_trends;
 
 --For products purchased in 2022 on the website or products purchased on mobile in any year, which region has the highest time to deliver?
+--Triple join between the orders_status table, orders table, customers table, and the geo_lookup table
+--Group by 1 to see breakdown by region
 
 SELECT geo_lookup.region as region,
   avg(date_diff(order_status.delivery_ts, order_status.purchase_ts, day)) as time_to_deliver
@@ -34,7 +39,8 @@ GROUP BY 1
 ORDER BY 2 DESC;
 
 --Are there certain products that are getting refunded more than others?
-
+--Use Case when to get the refund rate, clean product_name data, and to calculate amount of orders
+--Group by 1 to see breakdown by product_name
 SELECT case when product_name = '27in"" 4k gaming monitor' then '27in 4k gaming monitor' else orders.product_name end as product_name_cleaned,
   sum(CASE WHEN order_status.refund_ts is null then 0 else 1 end) as refunds,
   round(avg(CASE WHEN order_status.refund_ts is null then 0 else 1 end),2) as refund_rate
