@@ -38,6 +38,20 @@ WHERE (extract(year from orders.purchase_ts) = 2022 and orders.purchase_platform
 GROUP BY 1
 ORDER BY 2 DESC;
 
+--What is the average time to ship by region?
+--calculate the average of the difference between the purchase_ts and ship_ts
+SELECT geo_lookup.region as region,
+  avg(date_diff(order_status.ship_ts, order_status.purchase_ts, day)) as time_to_ship
+FROM core.order_status
+LEFT JOIN core.orders 
+ON order_status.order_id = orders.id
+LEFT JOIN core.customers
+ON customers.id = orders.customer_id
+LEFT JOIN core.geo_lookup
+ON geo_lookup.country = customers.country_code
+GROUP BY 1
+ORDER BY 2 DESC;
+
 --Are there certain products that are getting refunded more than others?
 --Use Case when to get the refund rate, clean product_name data, and to calculate amount of orders
 --Group by 1 to see breakdown by product_name
