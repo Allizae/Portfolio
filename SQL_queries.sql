@@ -93,7 +93,7 @@ WHERE order_ranking = 1;
 -- Calculate the total loyalty participants using sum function
 
 SELECT marketing_channel,
-  round(avg(loyalty_program) as loyalty_signup_rate,
+  round(avg(loyalty_program)) as loyalty_signup_rate,
   sum(loyalty_program) as loyalty_signup_count
 FROM core.customers
 GROUP BY 1
