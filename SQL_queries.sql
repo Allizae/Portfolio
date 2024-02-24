@@ -49,3 +49,38 @@ LEFT JOIN core.order_status
 ON orders.id = order_status.order_id
 GROUP BY 1
 ORDER BY 3 DESC;
+
+--What is the most popular product by region?
+--The first CTE selects the product_name then counts the total orders of that product name and then the region those orders were made
+--The second CTE uses row_number to rank the total_orders by region per product
+--The last select statement selects the region, order_count, and top order ranking in the ranked orders table
+with sales_by_product as (SELECT geo_lookup.region as region,
+  orders.product_name,
+  COUNT (distinct orders.id) as total_orders
+FROM core.orders
+LEFT JOIN core.customers
+ON orders.customer_id = customers.id
+LEFT JOIN core.geo_lookup
+ON geo_lookup.country = customers.country_code
+GROUP BY 1, 2),
+
+ranked_orders as (
+SELECT *,
+  row_number() over (partition by region order by total_orders desc) as order_ranking
+FROM sales_by_product
+ORDER BY 4 asc)
+
+SELECT *
+FROM ranked_orders
+WHERE order_ranking = 1;
+
+-- Which marketing channel has the highest average signup rate for the loyalty program compared to the marketing channel that has the highest number of loyalty program participants?
+-- Calculate the signup rate using the average
+-- Calculate the total loyalty participants using sum function
+
+SELECT marketing_channel,
+  round(avg(loyalty_program) as loyalty_signup_rate,
+  sum(loyalty_program) as loyalty_signup_count
+FROM core.customers
+GROUP BY 1
+ORDER BY 2 DESC;
