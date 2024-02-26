@@ -1,5 +1,5 @@
-# Data Insights into I-Trade Analysis Project
-I-Trade is an e-commerce company that specializes in selling electronic products internationally. This project goes into an analysis for various performance metrics including sales trends, product mix, the loyalty member program, and operational effeciency.
+# Data Insights into Simple Trade Analysis Project
+Simple Trade is an e-commerce company that specializes in selling electronic products internationally. This project goes into an analysis for various performance metrics including sales trends, product mix, the loyalty member program, and operational effeciency.
 
 Tools used for this project: SQL, Excel
 
@@ -8,14 +8,14 @@ Access SQL Queries Here:
 # About the Data
 
 ![image](https://github.com/Allizae/Portfolio/assets/139420330/a36b97e8-57d9-4ab7-a329-0b6dab98a710)
-Analysis was performed on 4 tables through SQL queries and Excel pivot tables.
+SQL Queries were performed across 4 tables analyzing over 10k records.
 
 # Summary and Insights
 1. Sales Trends
-   - Q2 of 2020 was the best performing quarter with 255 total orders and ~$4M in total sales.
+   - Q2 of 2020 was the best performing quarter with 9,740 total orders and ~$3M in total sales.
    - 2022 experienced a steep decline in performance as total sales are down 46%.
-   - Across each year, December is the best performing month with $1.4M in total sales which are up 24% from the previous month.
-   - October is the poorest performing month with $978K total sales and 29% decrease from the previous month.
+   - Across each year, December is the best performing month with $2.85M in total sales which are up 23% from the previous month.
+   - February is the poorest performing month with $1.9M total sales and 25% decrease from the previous month.
      
 3. Product Mix
    - In terms of Apple products, Apple Airpods Headphones are the most popular item with the highest order count consistently throughout 2019-2022 and highest total sales in 3 of the 4 years.
