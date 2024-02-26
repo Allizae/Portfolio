@@ -8,7 +8,8 @@ Access SQL Queries Here:
 # About the Data
 
 ![image](https://github.com/Allizae/Portfolio/assets/139420330/a36b97e8-57d9-4ab7-a329-0b6dab98a710)
-SQL Queries were performed across 4 tables analyzing over 10k records.
+SQL Queries were performed across 4 tables analyzing 108,128 records. 
+Data Cleaning: The raw data had issues with inconsistent date formatting, nonsensical values, nulls, etc. A documented data cleaning process through excel can be found here.
 
 # Summary and Insights
 1. Sales Trends
