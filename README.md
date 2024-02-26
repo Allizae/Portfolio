@@ -13,6 +13,8 @@ SQL Queries were performed across 4 tables analyzing 108,128 records.
 Data Cleaning: The raw data had issues with inconsistent date formatting, nonsensical values, nulls, etc. A documented data cleaning process through excel can be found [here](https://github.com/Allizae/Portfolio/blob/main/Data%20Cleaning%20Documentation.pdf).
 
 # Summary and Insights
+
+Insights were gathered from pivot tables in Excel and SQL queries to answer targeted business questions.
 1. Sales Trends
    - Q2 of 2020 was the best performing quarter with 9,740 total orders and ~$3M in total sales.
    - 2022 experienced a steep decline in performance as total sales are down 46%.
