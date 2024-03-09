@@ -39,3 +39,6 @@ Insights were gathered from pivot tables in Excel and SQL queries to answer targ
    - The average time to ship a product is about 2 days across all regions.
   
 #  Recommendations
+   Marketing Team
+   1. Increase budgeting for adspend on Apple Airpods Headphones as they tend to be the most popular item consistently.
+   2. Investigate the reason for the higher conversion rates among the email and social media channels to determine whether the team needs to focus on customer acquisistion on these platforms.
