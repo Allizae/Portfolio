@@ -3,8 +3,8 @@ Simple Trade is an e-commerce company that specializes in selling electronic pro
 
 Tools used for this project: SQL, Excel
 
-Access SQL Queries Here:
-
+Access SQL Queries [Here
+](https://github.com/Allizae/Portfolio/blob/main/SQL_queries.sql)
 # About the Data
 
 ![image](https://github.com/Allizae/Portfolio/assets/139420330/a36b97e8-57d9-4ab7-a329-0b6dab98a710)
