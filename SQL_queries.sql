@@ -89,8 +89,8 @@ FROM ranked_orders
 WHERE order_ranking = 1;
 
 -- Which marketing channel has the highest average signup rate for the loyalty program compared to the marketing channel that has the highest number of loyalty program participants?
--- Calculate the signup rate using the average
--- Calculate the total loyalty participants using sum function
+-- Calculate the signup rate using the average of the loyalty program column
+-- Calculate the total loyalty participants using sum function for the loylty program column
 
 SELECT marketing_channel,
   round(avg(loyalty_program)) as loyalty_signup_rate,
