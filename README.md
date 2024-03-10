@@ -8,7 +8,7 @@ Access SQL Queries [Here
 # About the Data
 
 ![image](https://github.com/Allizae/Portfolio/assets/139420330/a36b97e8-57d9-4ab7-a329-0b6dab98a710)
-SQL Queries were performed across 4 tables analyzing 108,128 records. 
+SQL Queries were performed across 4 tables; customers, geo_lookup, oreder_status, and orders, analyzing 108,128 records. 
 
 Data Cleaning: The raw data had issues with inconsistent date formatting, nonsensical values, nulls, etc. A documented data cleaning process through excel can be found [here](https://github.com/Allizae/Portfolio/blob/main/Data%20Cleaning%20Documentation.pdf).
 
@@ -27,6 +27,7 @@ Insights were gathered from pivot tables in Excel and SQL queries to answer targ
       - For Apple products, refunds tend to occur the lowest among this product which is most visibly seen in 2019 where the refund rate was 6% compared to 11% for Apple iPhone and 18% for Macbook Air Laptop.
    - The 27in 4k gaming monitor is the second most popular product in 3 of the 4 regions.
    - ThinkPad Laptops have the highest refund rate at 12%. Customers seem to be happiest with the Samsung Charging Cable Pack as refunds occur at a 1% rate which is the least among all products.
+   - Bose Soundsport Headphones are the poorest performing product with only 27 orders and $3K total sales making it less than 1% of sales.
      
 3. Loyalty Program
    - Starting in 2022, customers in the loyalty program surpass non-loyalty customers by all key metrics (total sales, average order value, and order count) spending $30 more on average.
@@ -39,6 +40,9 @@ Insights were gathered from pivot tables in Excel and SQL queries to answer targ
    - The average time to ship a product is about 2 days across all regions.
   
 #  Recommendations
-   Marketing Team
+   These recommeddations are based on the insights above.
+   
    1. Increase budgeting for adspend on Apple Airpods Headphones as they tend to be the most popular item consistently.
    2. Investigate the reason for the higher conversion rates among the email and social media channels to determine whether the team needs to focus on customer acquisistion on these platforms.
+   3. Cease offerings for the Bose Soundsport Headphones as they contribute to a  negligible amount of sales.
+   4. Conduct market research on the international market to boost sales that reflect the North American region which is our highest performing market.
